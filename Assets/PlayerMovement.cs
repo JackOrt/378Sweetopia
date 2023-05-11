@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private AudioSource[] sounds;
-    private AudioSource dieNoise;
     private AudioSource eatNoise;
     bool grounded;
    
@@ -14,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         grounded = true;
-        sounds = GetComponents<AudioSource>();
-        dieNoise = sounds[0];
-        eatNoise = sounds[1];
+        eatNoise = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,11 +45,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("true");
             grounded = true;
         }
-        if(other.gameObject.tag == "enemy"){
-            Debug.Log("collided!");
-            dieNoise.Play();
-            SceneManager.LoadScene("Lose");
-        }
+       
     }
     void OnCollisionExit2D (Collision2D other){
         if(other.gameObject.tag == "terrain"){
