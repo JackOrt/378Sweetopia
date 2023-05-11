@@ -22,7 +22,7 @@ public class spring : MonoBehaviour
         if(col.gameObject.tag == "Player" && Input.GetKey("space")){
             Debug.Log("Here");
             gameObject.transform.localScale = new Vector3(2, 2, 2);
-            player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 20, 0);
+            player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 22, 0);
         }
     }
 }

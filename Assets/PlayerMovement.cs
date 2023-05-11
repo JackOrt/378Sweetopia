@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private AudioSource eatNoise;
     bool grounded;
+    private
    
     // Start is called before the first frame update
     void Start()
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == "food"){
             eatNoise.Play();
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<Collected>().gotEaten();
         }
     }
 }
