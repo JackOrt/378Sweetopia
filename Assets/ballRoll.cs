@@ -14,7 +14,7 @@ public class ballRoll : MonoBehaviour
     void Update()
     {
         GetComponent<Transform>().Rotate(0, 0, 1);
-        GetComponent<Rigidbody2D>().velocity = new Vector3(-4f, 0, 0);
+        GetComponent<Rigidbody2D>().velocity = new Vector3(-6f, 0, 0);
     }
 
 }
