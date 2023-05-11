@@ -5951,7 +5951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.000023841858}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644920712
@@ -7193,8 +7193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -0.001}
-  m_SizeDelta: {x: 228.21, y: 30.068}
+  m_AnchoredPosition: {x: -600, y: 375}
+  m_SizeDelta: {x: 228.20996, y: 30.067993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949814853
 MonoBehaviour:
@@ -7350,7 +7350,7 @@ GameObject:
   - component: {fileID: 2034803145}
   - component: {fileID: 2034803149}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Cheese
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
