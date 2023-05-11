@@ -19,24 +19,24 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("up") && grounded)
+        if(Input.GetKey(KeyCode.W) && grounded)
         {
             //grounded = false;
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, 12, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 12);
         }
-        else if(Input.GetKey("right"))
+        else if(Input.GetKey(KeyCode.D))
         {
             if(gameObject.transform.localScale.x < 0){
                 gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
-            GetComponent<Rigidbody2D>().velocity = new Vector3(4, 0, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(5, GetComponent<Rigidbody2D>().velocity.y);
         }
-        else if(Input.GetKey("left"))
+        else if(Input.GetKey(KeyCode.A))
         {
             if(gameObject.transform.localScale.x > 0){
                 gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
-            GetComponent<Rigidbody2D>().velocity = new Vector3(-4, 0, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-5, GetComponent<Rigidbody2D>().velocity.y);
         
         }
     }
