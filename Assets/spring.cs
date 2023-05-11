@@ -5,7 +5,6 @@ using UnityEngine;
 public class spring : MonoBehaviour
 {
     public GameObject player;
-    public PlayerMovement pressed;
     // Start is called before the first frame update
     void Start()
     {

@@ -6006,6 +6006,7 @@ GameObject:
   - component: {fileID: 776473701}
   - component: {fileID: 776473702}
   - component: {fileID: 776473704}
+  - component: {fileID: 776473705}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6235,6 +6236,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &776473705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776473697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2d9cb23d04c4dc8bf2fce4ea5cc93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
+  healthBar: {fileID: 1949814854}
 --- !u!1 &842062375
 GameObject:
   m_ObjectHideFlags: 0
@@ -6338,7 +6354,7 @@ GameObject:
   - component: {fileID: 896908387}
   - component: {fileID: 896908386}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Spring Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6371,7 +6387,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.000000059604645}
+  m_Offset: {x: 0, y: 0.021904528}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6382,7 +6398,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1740227, y: 1.2120107}
+  m_Size: {x: 1.2178345, y: 1.2558197}
   m_EdgeRadius: 0
 --- !u!212 &896908388
 SpriteRenderer:
@@ -6750,6 +6766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1680fc927f42379268bfbeb0ce64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 776473705}
 --- !u!1 &1776538181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7162,7 +7179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b200517a0d64317a99054ec71a544a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 1949814853}
 --- !u!1 &1985727786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,6 +7310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac949624e94468abbbd3af486773d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 776473705}
 --- !u!212 &2034803147
 SpriteRenderer:
   m_ObjectHideFlags: 0
