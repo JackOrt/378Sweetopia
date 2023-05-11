@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ballRoll : MonoBehaviour
 {
     private AudioSource hitNoise;
+    public PlayerHealth player;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class ballRoll : MonoBehaviour
          if(other.gameObject.tag == "Player"){
             Debug.Log("collided!");
             hitNoise.Play();
-            SceneManager.LoadScene("Lose");
+            player.Damage(5);
+            //SceneManager.LoadScene("Lose");
         }
     }
 
