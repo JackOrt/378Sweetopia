@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private AudioSource eatNoise;
     bool grounded;
-    private
+    SpriteRenderer spi;
+    
    
     // Start is called before the first frame update
     void Start()
     {
+        spi = GetComponent<SpriteRenderer>();
         grounded = true;
         eatNoise = GetComponent<AudioSource>();
     }
@@ -26,16 +28,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            if(gameObject.transform.localScale.x < 0){
-                gameObject.transform.localScale = new Vector3(1, 1, 1);
-            }
+            spi.flipX = false;
             GetComponent<Rigidbody2D>().velocity = new Vector2(5, GetComponent<Rigidbody2D>().velocity.y);
         }
         else if(Input.GetKey(KeyCode.A))
         {
-            if(gameObject.transform.localScale.x > 0){
-                gameObject.transform.localScale = new Vector3(-1, 1, 1);
-            }
+            spi.flipX = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(-5, GetComponent<Rigidbody2D>().velocity.y);
         
         }
