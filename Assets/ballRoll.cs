@@ -7,6 +7,7 @@ public class ballRoll : MonoBehaviour
 {
     private AudioSource hitNoise;
     public PlayerHealth player;
+    public int damage = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +23,22 @@ public class ballRoll : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D other){
          if(other.gameObject.tag == "Player"){
-            Debug.Log("collided!");
+            //Debug.Log("collided!");
             hitNoise.Play();
-            player.Damage(5);
+            player.Damage(damage);
+            StartCoroutine(waitToHit());
             //SceneManager.LoadScene("Lose");
         }
     }
 
+     IEnumerator waitToHit()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(0.2f);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+    }
 }
+
+

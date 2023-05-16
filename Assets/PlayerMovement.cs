@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private AudioSource eatNoise;
+    //private AudioSource eatNoise;
     bool grounded;
     SpriteRenderer spi;
     
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         spi = GetComponent<SpriteRenderer>();
         grounded = true;
-        eatNoise = GetComponent<AudioSource>();
+        //eatNoise = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D other){
         if(other.gameObject.tag == "terrain"){
-            Debug.Log("true");
+            //Debug.Log("true");
             grounded = true;
         }
        
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == "food"){
-            eatNoise.Play();
+            //eatNoise.Play();
             col.gameObject.GetComponent<Collected>().gotEaten();
         }
     }

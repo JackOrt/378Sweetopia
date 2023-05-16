@@ -18,7 +18,7 @@ public class script : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("food").Length == 0){
             SceneManager.LoadScene("Win");
         }
-        if(health.currentHealth <= 0){
+        else if(health.currentHealth <= 0){
             SceneManager.LoadScene("Lose");
         }
     }
