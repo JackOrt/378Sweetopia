@@ -271,6 +271,6 @@ MonoBehaviour:
   detectionRadius: 5
   projectileSpeed: 10
   fireRate: 1
-  projectilePrefab: {fileID: 5492260648340063171, guid: 102796c556448644f8e6e6e0296daea8, type: 3}
+  projectilePrefab: {fileID: 7179540892874045047, guid: 102796c556448644f8e6e6e0296daea8, type: 3}
   hitNoise: {fileID: 5043356740232586203}
   projectileLifetime: 3
