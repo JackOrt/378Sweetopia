@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac949624e94468abbbd3af486773d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1135691116601289305, guid: 2400a8d77155f4057b347485c662b5a3, type: 3}
   damage: 5
 --- !u!50 &5043356740232586201
 Rigidbody2D:
@@ -254,7 +254,7 @@ MonoBehaviour:
   distanceToPlayer: 15
   jumpCooldown: 3
   hitNoise: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1135691116601289305, guid: 2400a8d77155f4057b347485c662b5a3, type: 3}
 --- !u!114 &5043356740232592421
 MonoBehaviour:
   m_ObjectHideFlags: 0
