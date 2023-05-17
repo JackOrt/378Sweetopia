@@ -21,15 +21,16 @@ public class ballRoll : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector3(-6f, 0, 0);
     }
 
-    void OnCollisionEnter2D (Collision2D other){
-         if(other.gameObject.tag == "Player"){
-            //Debug.Log("collided!");
-            hitNoise.Play();
-            player.Damage(damage);
-            StartCoroutine(waitToHit());
-            //SceneManager.LoadScene("Lose");
-        }
+void OnCollisionEnter2D(Collision2D other) {
+    if (other.gameObject.CompareTag("Player")) {
+        //Debug.Log("collided!");
+        hitNoise.Play();
+        PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+        playerHealth.Damage(damage);
+        StartCoroutine(waitToHit());
+        //SceneManager.LoadScene("Lose");
     }
+}
 
      IEnumerator waitToHit()
     {
