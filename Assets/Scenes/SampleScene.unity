@@ -22017,6 +22017,14 @@ PrefabInstance:
       propertyPath: m_camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1135691116774400950, guid: 2400a8d77155f4057b347485c662b5a3, type: 3}
+      propertyPath: launchType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135691116774400950, guid: 2400a8d77155f4057b347485c662b5a3, type: 3}
+      propertyPath: launchSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1285622746805062629, guid: 2400a8d77155f4057b347485c662b5a3, type: 3}
       propertyPath: m_RootOrder
       value: 1
