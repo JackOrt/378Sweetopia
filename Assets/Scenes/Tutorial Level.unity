@@ -5343,6 +5343,10 @@ PrefabInstance:
       propertyPath: winScene
       value: SampleScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2520334497715954815, guid: d15f3b40d2d464f14a20c0081e01ad16, type: 3}
+      propertyPath: winSceneName
+      value: SampleScene
+      objectReference: {fileID: 0}
     - target: {fileID: 4113450517993037832, guid: d15f3b40d2d464f14a20c0081e01ad16, type: 3}
       propertyPath: m_Name
       value: GameManager
